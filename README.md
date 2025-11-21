@@ -46,7 +46,11 @@ static_configs:
 "ipAddress": "10.0.0.1"
 }
 - GET /restconf/data/network-configs
-Errors for testing: use invalid IDs or invalid JSON.
+
+
+Errors for testing: 
+- use invalid IDs
+- use invalid JSON
 ## Conclusion
 This project demonstrates a complete observability-enabled NMS Monitoring System using Spring
 Boot, Prometheus, and Grafana.
