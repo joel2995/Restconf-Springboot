@@ -9,9 +9,9 @@ This project implements:
 - Prometheus-based metrics scraping
 - Grafana dashboards (8 professional panels)
 ## Run Instructions
-# 1. Import & Start Application
+1. Import & Start Application
 Import as Maven project → Run RestconfSpringbootApplication.
-# 2. H2 Database Console
+2. H2 Database Console
 URL: http://localhost:8080/h2-console
 JDBC URL: jdbc:h2:mem:restconfdb
 ## RESTCONF API Endpoints
@@ -22,15 +22,15 @@ GET /restconf/data/network-configs/{id}
 PUT /restconf/data/network-configs/{id}
 DELETE /restconf/data/network-configs/{id}
 ## Metrics & Observability Stack
-# 1. Actuator + Micrometer (Prometheus endpoint: /actuator/prometheus)
-# 2. Custom Metric: nms_network_config_created_count_total
-# 3. Prometheus Config:
+1. Actuator + Micrometer (Prometheus endpoint: /actuator/prometheus)
+2. Custom Metric: nms_network_config_created_count_total
+3. Prometheus Config:
 scrape_configs:
 - job_name: 'restconf_nms'
 metrics_path: '/actuator/prometheus'
 static_configs:
 - targets: ['localhost:8080']
-# 4. Grafana Dashboard (8 Panels):
+4. Grafana Dashboard (8 Panels):
 1) Total Configs Created – Stat
 2) API Request Breakdown – Bar
 3) Creation Rate – Time series
