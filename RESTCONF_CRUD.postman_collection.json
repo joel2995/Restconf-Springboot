@@ -1,0 +1,130 @@
+{
+  "info": {
+    "name": "RESTCONF_CRUD",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_postman_id": "restconf-collection-001"
+  },
+  "item": [
+    {
+      "name": "Create NetworkConfig (POST)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Router-1\",\n  \"ipAddress\": \"192.168.1.1\",\n  \"vendor\": \"Cisco\",\n  \"description\": \"Edge router\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/restconf/data/network-configs",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "restconf",
+            "data",
+            "network-configs"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get All NetworkConfigs (GET)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/restconf/data/network-configs",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "restconf",
+            "data",
+            "network-configs"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get One NetworkConfig (GET)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/restconf/data/network-configs/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "restconf",
+            "data",
+            "network-configs",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Update NetworkConfig (PUT)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Router-1\",\n  \"ipAddress\": \"192.168.1.10\",\n  \"vendor\": \"Cisco\",\n  \"description\": \"Updated IP\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/restconf/data/network-configs/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "restconf",
+            "data",
+            "network-configs",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Delete NetworkConfig (DELETE)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/restconf/data/network-configs/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "restconf",
+            "data",
+            "network-configs",
+            "1"
+          ]
+        }
+      }
+    }
+  ]
+}
